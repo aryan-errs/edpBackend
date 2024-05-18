@@ -26,7 +26,7 @@ API_KEY='7515907d-7bdf-11ee-8cbb-0200cd936042'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
