@@ -34,8 +34,6 @@ Symptoms
 text: {text}
 """
 
-# os.environ['OPENAI_API_KEY'] = ''
-
 data="""Subfolder: acanthosis nigricans, Number of Images: 92
 Subfolder: acne, Number of Images: 183
 Subfolder: acne vulgaris, Number of Images: 335
@@ -154,7 +152,7 @@ Subfolder: xeroderma pigmentosum, Number of Images: 81"""
 class ChatView(APIView):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.client=OpenAI(api_key='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')
+        self.client=OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
         self.model=None
         self.model2=None
         # self.assistant_id=create_assistant(self.client)
@@ -162,7 +160,7 @@ class ChatView(APIView):
         # Check if the model is already loaded in the cache
         if not self.model:
             # Load the model here
-            self.model = whisper.load_model("openai/whisper-base")
+            self.model = whisper.load_model("base.en")
 
     def load_image_model(self):
         # Check if the model is already loaded in the cache
