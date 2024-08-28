@@ -11,7 +11,6 @@ The goal is to extend healthcare services to areas with limited access to medica
 - **Machine Learning Framework**: TensorFlow
 - **Computer Vision Library**: OpenCV
 - **Microcontroller Platform**: Raspberry Pi
-- **GPIO Handling**: GPIO Zero
 - **Operating System**: Raspbian OS
 - **Version Control**: Git
 - **Pre-trained Model**: TensorFlow Object Detection Model
